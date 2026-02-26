@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Brik SaaS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      background: rgba(255,255,255,0.05);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .login-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+      color: #00ff88;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .input-group label {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      transition: 0.3s;
+      background: rgba(255,255,255,0.1);
+      color: white;
+    }
+
+    .input-group input:focus {
+      background: rgba(255,255,255,0.2);
+      box-shadow: 0 0 8px #00ff88;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn-login {
+      background: linear-gradient(135deg, #00ff88, #00c3ff);
+      color: #0f2027;
+    }
+
+    .btn-login:hover {
+      background: linear-gradient(135deg, #00cc6a, #0099cc);
+      transform: scale(1.05);
+    }
+
+    .btn-register {
+      background: rgba(255,255,255,0.2);
+      color: white;
+    }
+
+    .btn-register:hover {
+      background: rgba(255,255,255,0.35);
+      transform: scale(1.05);
+    }
+
+    #resendBtn {
+      margin-top: 10px;
+      padding: 10px 0;
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    #resendBtn:hover {
+      background: rgba(255,255,255,0.25);
+      transform: scale(1.03);
+    }
+
+    .footer-text {
+      margin-top: 20px;
+      font-size: 13px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Brik SaaS</h2>
+
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Digite seu email">
+    </div>
+
+    <div class="input-group">
+      <label>Senha</label>
+      <input type="password" id="senha" placeholder="Digite sua senha">
+    </div>
+
+    <button id="resendBtn">Reenviar verificação</button>
+    <button id="loginBtn" class="btn btn-login">Entrar</button>
+    <button id="registerBtn" class="btn btn-register">Criar Conta</button>
+
+    <div class="footer-text">
+      Sistema seguro 🔐
+    </div>
+  </div>
+
+  <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>
